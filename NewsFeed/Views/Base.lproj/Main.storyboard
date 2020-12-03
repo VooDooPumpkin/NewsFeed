@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PGg-o3-kOj">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FyD-sV-M61">
+            <objects>
+                <navigationController id="PGg-o3-kOj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z2h-3M-ZTh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S3I-lc-Xm1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpZ-cc-4N3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1282" y="198"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eaU-Ts-Rn9">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrM-Vi-E09">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJt-cD-jJb">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omS-Rr-fmA" customClass="HeadlinesFeed" customModule="NewsFeed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="1000" text="All news in the US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dw-GU-Rix">
+                                                <rect key="frame" x="0.0" y="251.5" width="375" height="329.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vGI-Qr-9h3">
+                                                <rect key="frame" x="0.0" y="586" width="375" height="37"/>
+                                                <subviews>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9Tn-vP-JZH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="vGI-Qr-9h3" firstAttribute="leading" secondItem="ZJt-cD-jJb" secondAttribute="leading" id="6DC-sR-3uD"/>
+                                            <constraint firstAttribute="trailing" secondItem="omS-Rr-fmA" secondAttribute="trailing" id="GvE-cX-fth"/>
+                                            <constraint firstAttribute="bottom" secondItem="vGI-Qr-9h3" secondAttribute="bottom" id="V8g-g8-IMf"/>
+                                            <constraint firstItem="omS-Rr-fmA" firstAttribute="leading" secondItem="ZJt-cD-jJb" secondAttribute="leading" id="ciG-Us-vbb"/>
+                                            <constraint firstItem="9dw-GU-Rix" firstAttribute="leading" secondItem="ZJt-cD-jJb" secondAttribute="leading" id="dVS-Pp-50W"/>
+                                            <constraint firstAttribute="trailing" secondItem="vGI-Qr-9h3" secondAttribute="trailing" id="fIW-B7-0lq"/>
+                                            <constraint firstItem="omS-Rr-fmA" firstAttribute="top" secondItem="ZJt-cD-jJb" secondAttribute="top" id="mbl-8r-8Ib"/>
+                                            <constraint firstAttribute="trailing" secondItem="9dw-GU-Rix" secondAttribute="trailing" id="nLd-gD-Kw0"/>
+                                            <constraint firstItem="9dw-GU-Rix" firstAttribute="top" secondItem="omS-Rr-fmA" secondAttribute="bottom" constant="2.5" id="pBV-kb-4kp"/>
+                                            <constraint firstItem="vGI-Qr-9h3" firstAttribute="top" secondItem="9dw-GU-Rix" secondAttribute="bottom" constant="5" id="ydk-0m-4X6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ZJt-cD-jJb" secondAttribute="bottom" id="847-xL-eiP"/>
+                                    <constraint firstItem="ZJt-cD-jJb" firstAttribute="leading" secondItem="QrM-Vi-E09" secondAttribute="leading" id="Crd-9l-2zy"/>
+                                    <constraint firstItem="ZJt-cD-jJb" firstAttribute="top" secondItem="QrM-Vi-E09" secondAttribute="top" id="ElY-Kh-o36"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZJt-cD-jJb" secondAttribute="trailing" id="bFo-Ta-zEo"/>
+                                    <constraint firstItem="ZJt-cD-jJb" firstAttribute="centerY" secondItem="QrM-Vi-E09" secondAttribute="centerY" placeholder="YES" id="lrP-4c-F7L"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="41V-RB-TJz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="45T-Da-Maj"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QrM-Vi-E09" firstAttribute="trailing" secondItem="4wL-DP-j9m" secondAttribute="trailing" id="RiJ-an-EBL"/>
+                            <constraint firstItem="omS-Rr-fmA" firstAttribute="height" secondItem="4wL-DP-j9m" secondAttribute="height" multiplier="0.4" id="TaX-c1-f7p"/>
+                            <constraint firstItem="ZJt-cD-jJb" firstAttribute="width" secondItem="eaU-Ts-Rn9" secondAttribute="width" id="bX6-tG-TAP"/>
+                            <constraint firstItem="4wL-DP-j9m" firstAttribute="bottom" secondItem="QrM-Vi-E09" secondAttribute="bottom" id="oj7-r7-C1R"/>
+                            <constraint firstItem="4wL-DP-j9m" firstAttribute="leading" secondItem="QrM-Vi-E09" secondAttribute="leading" id="txj-8y-1AU"/>
+                            <constraint firstItem="4wL-DP-j9m" firstAttribute="top" secondItem="QrM-Vi-E09" secondAttribute="top" id="xdX-nA-x89"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4wL-DP-j9m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="l46-fy-M74"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="9Tn-vP-JZH" id="sgi-8O-dEd"/>
+                        <outlet property="rootView" destination="eaU-Ts-Rn9" id="4dX-vi-Rqm"/>
+                        <outlet property="topHeadline" destination="omS-Rr-fmA" id="vTF-hq-AW5"/>
+                        <outlet property="vScroll" destination="QrM-Vi-E09" id="P5N-iF-vFM"/>
+                        <outlet property="verticalStack" destination="vGI-Qr-9h3" id="2LU-74-qLf"/>
+                        <segue destination="1gu-WN-dOb" kind="show" identifier="ShowNewsDetails" id="Oe4-nH-4RE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="197"/>
+        </scene>
+        <!--News Details View Controller-->
+        <scene sceneID="IYc-XQ-r9I">
+            <objects>
+                <viewController id="1gu-WN-dOb" customClass="NewsDetailsViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZm-QP-4sM">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fp-w6-rkl" customClass="NewsDetailInfo" customModule="NewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7jQ-TL-ASx" firstAttribute="trailing" secondItem="9fp-w6-rkl" secondAttribute="trailing" id="9Dy-zq-hVA"/>
+                            <constraint firstItem="9fp-w6-rkl" firstAttribute="top" secondItem="7jQ-TL-ASx" secondAttribute="top" id="d5T-ht-Du6"/>
+                            <constraint firstItem="7jQ-TL-ASx" firstAttribute="bottom" secondItem="9fp-w6-rkl" secondAttribute="bottom" id="s7Z-iW-uJE"/>
+                            <constraint firstItem="9fp-w6-rkl" firstAttribute="leading" secondItem="7jQ-TL-ASx" secondAttribute="leading" id="vTF-vO-Mks"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7jQ-TL-ASx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wrD-Wc-06a"/>
+                    <connections>
+                        <outlet property="newsDetailsView" destination="9fp-w6-rkl" id="agK-X9-IXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja9-X5-Fg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="197"/>
+        </scene>
+    </scenes>
+</document>

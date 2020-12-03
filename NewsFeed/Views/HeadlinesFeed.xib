@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeadlinesFeed" customModule="NewsFeed" customModuleProvider="target">
+            <connections>
+                <outlet property="hStack" destination="DKc-k6-lt5" id="b2M-bD-J2T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="Top headlines in the US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-6E-pOH">
+                    <rect key="frame" x="0.0" y="2.5" width="414" height="24"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRE-Nr-75G">
+                    <rect key="frame" x="0.0" y="31.5" width="414" height="859.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DKc-k6-lt5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="859.5"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="DKc-k6-lt5" secondAttribute="bottom" id="7G6-Yg-Gsp"/>
+                        <constraint firstItem="DKc-k6-lt5" firstAttribute="top" secondItem="QRE-Nr-75G" secondAttribute="top" id="K0y-0Q-f52"/>
+                        <constraint firstItem="DKc-k6-lt5" firstAttribute="height" secondItem="QRE-Nr-75G" secondAttribute="height" id="WJO-X8-JEY"/>
+                        <constraint firstItem="DKc-k6-lt5" firstAttribute="leading" secondItem="QRE-Nr-75G" secondAttribute="leading" id="bUg-ZH-zdf"/>
+                        <constraint firstItem="DKc-k6-lt5" firstAttribute="centerX" secondItem="QRE-Nr-75G" secondAttribute="centerX" placeholder="YES" id="fwb-rl-YLD"/>
+                        <constraint firstAttribute="trailing" secondItem="DKc-k6-lt5" secondAttribute="trailing" id="r4e-rg-PAW"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="3Lu-4k-99E"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="t6x-eS-AAF"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="QRE-Nr-75G" firstAttribute="top" secondItem="yAe-6E-pOH" secondAttribute="bottom" constant="5" id="0x5-bT-ifO"/>
+                <constraint firstItem="yAe-6E-pOH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2z8-Sc-H52"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yAe-6E-pOH" secondAttribute="trailing" id="VXl-no-qdK"/>
+                <constraint firstItem="QRE-Nr-75G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vds-Rx-eBG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QRE-Nr-75G" secondAttribute="bottom" constant="5" id="dYy-M7-VtM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QRE-Nr-75G" secondAttribute="trailing" id="djC-nX-xpe"/>
+                <constraint firstItem="yAe-6E-pOH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2.5" id="ki2-hZ-zyN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="38" y="73"/>
+        </view>
+    </objects>
+</document>
